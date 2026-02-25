@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lukas Li | Engineering Builder & Community Sharer</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;500;700&family=Inter:wght@400;600&display=swap');
+        h1, h2, h3 { font-family: 'Space Grotesk', sans-serif; }
+        body { font-family: 'Inter', sans-serif; background-color: #fafafa; }
+        .sidebar { height: 100vh; position: sticky; top: 0; }
+        .uw-gold { background-color: #FFD54F; }
+        .card-hover:hover { transform: translateY(-5px); transition: all 0.3s ease; }
+        @media (max-width: 768px) { .sidebar { height: auto; position: relative; } }
+    </style>
+</head>
+<body class="text-slate-900">
+
+    <div class="flex flex-col md:flex-row min-h-screen">
+        <aside class="sidebar w-full md:w-80 uw-gold border-r border-yellow-500 p-8 flex flex-col shadow-2xl">
+            <div class="mb-8">
+                <div class="w-20 h-20 bg-black rounded-xl mb-4 flex items-center justify-center shadow-lg">
+                    <span class="text-yellow-400 text-3xl font-bold">L.</span>
+                </div>
+                <h1 class="text-3xl font-black leading-none">LUKAS<br>LI</h1>
+                <p class="mt-4 text-sm font-bold tracking-widest text-black/60 uppercase italic">Builder & Sharer</p>
+            </div>
+
+            <nav class="flex-1 space-y-6 text-black font-semibold mt-10">
+                <a href="#build" class="flex items-center gap-3 hover:bg-black/5 p-2 rounded transition-all"><i class="fas fa-hammer w-5"></i> What I Build</a>
+                <a href="#share" class="flex items-center gap-3 hover:bg-black/5 p-2 rounded transition-all"><i class="fas fa-bullhorn w-5"></i> What I Share</a>
+                <a href="#contact" class="flex items-center gap-3 hover:bg-black/5 p-2 rounded transition-all"><i class="fas fa-paper-plane w-5"></i> Connect</a>
+            </nav>
+
+            <div class="mt-auto flex gap-4 pt-8 border-t border-black/10">
+                <a href="https://www.linkedin.com/in/lukas-li-25875638b/" class="hover:scale-110 transition-transform"><i class="fab fa-linkedin fa-lg"></i></a>
+                <a href="mailto:b532li@uwaterloo.ca" class="hover:scale-110 transition-transform"><i class="fas fa-envelope fa-lg"></i></a>
+            </div>
+        </aside>
+
+        <main class="flex-1 p-6 md:p-16 max-w-6xl">
+            
+            <header class="mb-20">
+                <h2 class="text-5xl font-black mb-6">Designing for <span class="text-yellow-500">Function</span>,<br>Performing for <span class="text-blue-500">People</span>.</h2>
+                <p class="text-xl text-slate-500 max-w-2xl leading-relaxed">
+                    Biomedical Engineering student at the <strong>University of Waterloo</strong>. I bridge the gap between technical precision and human connection through engineering design and community engagement.
+                </p>
+            </header>
+
+            <section id="build" class="mb-24">
+                <div class="flex items-center gap-4 mb-10">
+                    <span class="text-xs font-black bg-black text-white px-2 py-1 uppercase">01</span>
+                    <h2 class="text-3xl font-black">THE BUILDER</h2>
+                </div>
+                
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                    <div class="bg-white p-8 border-2 border-slate-100 rounded-3xl card-hover shadow-sm">
+                        <div class="text-slate-300 mb-4 font-bold tracking-tighter text-4xl">CAD & FAB</div>
+                        <h3 class="text-xl font-bold mb-3">Mechanical "Goose" Puzzle</h3>
+                        <p class="text-slate-600 text-sm mb-6">Engineered a multi-part 3D-printable puzzle with movable wings. Created full technical documentation and assembly manuals for users.</p>
+                        <div class="flex gap-2">
+                            <span class="text-[10px] border border-slate-200 px-2 py-1 rounded-full font-bold">SOLIDWORKS</span>
+                            <span class="text-[10px] border border-slate-200 px-2 py-1 rounded-full font-bold">Z-SUITE</span>
+                        </div>
+                    </div>
+
+                    <div class="bg-white p-8 border-2 border-slate-100 rounded-3xl card-hover shadow-sm">
+                        <div class="text-slate-300 mb-4 font-bold tracking-tighter text-4xl">BIOMEDICAL</div>
+                        <h3 class="text-xl font-bold mb-3">Inclusive Cubing System</h3>
+                        <p class="text-slate-600 text-sm mb-6">Designed an accessibility-focused Rubik’s cube for upper-limb amputees, following the full engineering design cycle from empathy to testing.</p>
+                        <div class="flex gap-2">
+                            <span class="text-[10px] border border-slate-200 px-2 py-1 rounded-full font-bold">USER TESTING</span>
+                            <span class="text-[10px] border border-slate-200 px-2 py-1 rounded-full font-bold">UX</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section id="share" class="mb-24">
+                <div class="flex items-center gap-4 mb-10">
+                    <span class="text-xs font-black bg-blue-600 text-white px-2 py-1 uppercase">02</span>
+                    <h2 class="text-3xl font-black text-blue-600">THE SHARER</h2>
+                </div>
+                
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                    <div class="bg-blue-50 p-6 rounded-2xl">
+                        <i class="fas fa-hat-wizard text-2xl mb-4 text-blue-600"></i>
+                        <h4 class="font-bold mb-2">Magic Performance</h4>
+                        <p class="text-xs text-slate-600">Performing stage and close-up magic to engage youth and entertain the community at GYMC Youth Club.</p>
+                    </div>
+                    <div class="bg-blue-50 p-6 rounded-2xl">
+                        <i class="fas fa-language text-2xl mb-4 text-blue-600"></i>
+                        <h4 class="font-bold mb-2">Cultural Exchange</h4>
+                        <p class="text-xs text-slate-600">Mentoring newcomer students at Don Mills CI, helping them adapt through games and team-building exercises.</p>
+                    </div>
+                    <div class="bg-blue-50 p-6 rounded-2xl">
+                        <i class="fas fa-hand-holding-heart text-2xl mb-4 text-blue-600"></i>
+                        <h4 class="font-bold mb-2">Public Service</h4>
+                        <p class="text-xs text-slate-600">Museum docent in Tianjin and community volunteer, sharing knowledge and historical context with visitors.</p>
+                    </div>
+                </div>
+            </section>
+
+            <section class="mb-24 bg-zinc-900 text-white p-10 rounded-[3rem]">
+                <h3 class="text-xl font-bold mb-8">SKILLSET</h3>
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-8">
+                    <div>
+                        <p class="text-zinc-500 text-xs font-bold mb-4 uppercase">Languages</p>
+                        <p class="text-sm">English, Mandarin (Fluent)</p>
+                    </div>
+                    <div>
+                        <p class="text-zinc-500 text-xs font-bold mb-4 uppercase">Design</p>
+                        <p class="text-sm">SolidWorks, CAD, 3D Printing</p>
+                    </div>
+                    <div>
+                        <p class="text-zinc-500 text-xs font-bold mb-4 uppercase">Software</p>
+                        <p class="text-sm">C++, MATLAB, Git, MS Office</p>
+                    </div>
+                    <div>
+                        <p class="text-zinc-500 text-xs font-bold mb-4 uppercase">Certifications</p>
+                        <p class="text-sm">WHMIS, TPCS2</p>
+                    </div>
+                </div>
+            </section>
+
+        </main>
+    </div>
+
+</body>
+</html>
