@@ -69,23 +69,53 @@
             <section id="build" class="mb-32">
                 <div class="flex items-center gap-4 mb-12">
                     <span class="text-xs font-black bg-black text-white px-2 py-1 uppercase tracking-widest">01</span>
-                    <h2 class="text-4xl font-black tracking-tighter uppercase text-black">The project</h2>
+                    <h2 class="text-4xl font-black tracking-tighter uppercase text-black">The projects</h2>
                 </div>
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-10">
-                    <div class="bg-white p-8 border border-slate-200 rounded-[2rem] card-hover shadow-sm flex flex-col justify-between">
-                        <div>
-                            <div class="text-slate-200 mb-6 font-bold tracking-tighter text-5xl uppercase">CAD & FAB</div>
-                            <h3 class="text-2xl font-black mb-4 uppercase">Mechanical "Goose" Puzzle</h3>
-                            <p class="text-slate-600 text-sm mb-8 leading-relaxed">Engineered a multi-part 3D-printable puzzle with movable wings using SolidWorks.</p>
-                        </div>
-                        <a href="https://github.com/" target="_blank" class="inline-flex items-center gap-2 text-xs font-black border-b-2 border-yellow-400 pb-1 hover:text-yellow-600">
-                            <i class="fab fa-github"></i> VIEW REPOSITORY
-                        </a>
-                    </div>
+                
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                     
                     <div class="bg-white border border-slate-200 rounded-[2rem] card-hover shadow-sm overflow-hidden flex flex-col">
-                        <div class="h-64 bg-slate-100 relative flex overflow-hidden group">
-                            <div class="w-1/2 border-r-2 border-white overflow-hidden">
+                        <div class="h-48 bg-slate-100 relative overflow-hidden group">
+                            <img src="solidworks-design.jpg" alt="Goose Design" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+                        </div>
+                        <div class="p-6 flex-1 flex flex-col justify-between">
+                            <div>
+                                <div class="text-slate-200 mb-2 font-bold tracking-tighter text-3xl uppercase leading-none">CAD & FAB</div>
+                                <h3 class="text-xl font-black mb-3 uppercase leading-tight">Mechanical "Goose" Puzzle</h3>
+                                <p class="text-slate-600 text-[11px] mb-6 leading-relaxed">Engineered a multi-part 3D-printable puzzle with movable wings using SolidWorks modeling.</p>
+                            </div>
+                            <a href="https://github.com/lukasnaknak" target="_blank" class="inline-flex items-center gap-2 text-xs font-black border-b-2 border-yellow-400 pb-1 hover:text-yellow-600 w-fit">
+                                <i class="fab fa-github"></i> VIEW REPO
+                            </a>
+                        </div>
+                    </div>
+
+<div class="bg-white border border-slate-200 rounded-[2rem] card-hover shadow-sm overflow-hidden flex flex-col">
+    <div class="h-48 bg-slate-100 relative overflow-hidden group">
+        <video 
+            id="jetVideo"
+            class="w-full h-full object-cover cursor-pointer transition-transform duration-500 group-hover:scale-110"
+            poster="airjet.jpg"
+        >
+            <source src="SolidWorks toy project.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+    </div>
+    <div class="p-6 flex-1 flex flex-col justify-between">
+        <div>
+            <div class="text-slate-200 mb-2 font-bold tracking-tighter text-3xl uppercase leading-none">Toy Design</div>
+            <h3 class="text-xl font-black mb-3 uppercase leading-tight">Air Jetplane Concept</h3>
+            <p class="text-slate-600 text-[11px] mb-6 leading-relaxed">Developed complex surfacing and aerodynamic geometries in SolidWorks for a precision toy jet model.</p>
+        </div>
+        <a href="https://github.com/lukasnaknak" target="_blank" class="inline-flex items-center gap-2 text-xs font-black border-b-2 border-yellow-400 pb-1 hover:text-yellow-600 w-fit">
+            <i class="fab fa-github"></i> VIEW REPO
+        </a>
+    </div>
+</div>
+
+                    <div class="bg-white border border-slate-200 rounded-[2rem] card-hover shadow-sm overflow-hidden flex flex-col">
+                        <div class="h-48 bg-slate-100 relative flex overflow-hidden group">
+                            <div class="w-1/2 border-r border-white overflow-hidden">
                                 <img src="161 project concept sketch.jpg" alt="Cube Detail" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
                             </div>
                             <div class="w-1/2 overflow-hidden">
@@ -94,18 +124,17 @@
                                 </video>
                             </div>
                         </div>
-                        <div class="p-8 flex-1 flex flex-col justify-between">
+                        <div class="p-6 flex-1 flex flex-col justify-between">
                             <div>
-                                <div class="text-slate-200 mb-4 font-bold tracking-tighter text-4xl uppercase leading-none">Biomedical</div>
-                                <h3 class="text-2xl font-black mb-4 uppercase">Inclusive Cubing System</h3>
-                                <p class="text-slate-600 text-sm mb-8 leading-relaxed">Accessibility-focused Rubik’s cube design for upper-limb amputees. Combined tactile engineering with ergonomic user-testing.</p>
+                                <div class="text-slate-200 mb-2 font-bold tracking-tighter text-3xl uppercase leading-none">Biomedical</div>
+                                <h3 class="text-xl font-black mb-3 uppercase leading-tight">Inclusive Cubing System</h3>
+                                <p class="text-slate-600 text-[11px] mb-6 leading-relaxed">Accessibility-focused Rubik’s cube design for amputees. Combined tactile engineering with user-testing.</p>
                             </div>
                             <a href="https://github.com/lukasnaknak" target="_blank" class="inline-flex items-center gap-2 text-xs font-black border-b-2 border-yellow-400 pb-1 hover:text-yellow-600 w-fit">
-                                <i class="fab fa-github"></i> VIEW REPOSITORY
+                                <i class="fab fa-github"></i> VIEW REPO
                             </a>
                         </div>
                     </div>
-
                 </div>
             </section>
 
@@ -174,6 +203,18 @@
 
         </main>
     </div>
+    
+<script>
+    const video = document.getElementById("jetVideo");
 
+    video.addEventListener("click", function () {
+        if (video.paused) {
+            video.play();
+        } else {
+            video.pause();
+        }
+    });
+</script>
+    
 </body>
 </html>
