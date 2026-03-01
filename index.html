@@ -7,213 +7,172 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;500;700&family=Inter:wght@400;600&display=swap');
-        h1, h2, h3 { font-family: 'Space Grotesk', sans-serif; }
-        body { font-family: 'Inter', sans-serif; background-color: #fafafa; scroll-behavior: smooth; }
-        .sidebar { height: 100vh; position: sticky; top: 0; }
-        .uw-gold { background-color: #FFD54F; }
-        .card-hover:hover { transform: translateY(-8px); transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1); }
-        .nav-link:hover { background: rgba(0,0,0,0.05); padding-left: 1rem; }
-        @media (max-width: 768px) { .sidebar { height: auto; position: relative; } }
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap');
+        body { 
+            font-family: 'Inter', sans-serif; 
+            background-color: #ffffff; 
+            color: #1a1a1a;
+            scroll-behavior: smooth;
+        }
+        /* Minimalist text styling like the PhD screenshot */
+        .section-title { border-bottom: 1px solid #eee; padding-bottom: 0.5rem; margin-bottom: 2rem; }
+        .nav-link { color: #666; transition: color 0.2s; font-size: 0.875rem; }
+        .nav-link:hover { color: #000; }
     </style>
 </head>
-<body class="text-slate-900">
+<body class="max-w-6xl mx-auto px-6 py-12">
 
-    <div class="flex flex-col md:flex-row min-h-screen">
-        <aside class="sidebar w-full md:w-80 uw-gold border-r border-yellow-500 p-8 flex flex-col shadow-2xl z-50">
-            <div class="mb-8">
-<div class="w-32 h-32 -mt-4 -ml-3 mb-8 rounded-full overflow-hidden shadow-2xl border-4 border-white/90 transition-all duration-300 hover:scale-105 group">
-    <img 
-        src="profile.jpg" 
-        alt="Lukas Li" 
-        class="w-full h-full object-cover object-[70%_20%]"
-    >
-</div>
+    <header class="flex justify-between items-center mb-20">
+        <h1 class="text-3xl font-extrabold tracking-tighter">Lukas Li</h1>
+        <nav class="flex gap-8">
+            <a href="#about" class="nav-link">Home</a>
+            <a href="#build" class="nav-link">Projects</a>
+            <a href="#experience" class="nav-link">Experience</a>
+            <a href="#skills" class="nav-link">Skills</a>
+        </nav>
+    </header>
+
+    <div class="grid grid-cols-1 md:grid-cols-12 gap-16">
+        
+        <aside class="md:col-span-4">
+            <div class="sticky top-12">
+                <div class="w-48 h-48 rounded-full overflow-hidden border border-slate-200 mb-8 shadow-sm">
+                    <img src="profile.jpg" alt="Lukas Li" class="w-full h-full object-cover object-[70%_20%]">
+                </div>
                 
-                <h1 class="text-3xl font-black leading-none tracking-tighter">LUKAS<br>LI</h1>
-                <p class="mt-4 text-[10px] font-black tracking-widest text-black/50 uppercase italic">Current engineering student & product designer</p>
-            </div>
+                <h2 class="text-xl font-bold text-blue-600 mb-1">Engineering Student</h2>
+                <p class="text-slate-500 text-sm mb-6">1A Biomedical Engineering @ Waterloo</p>
+                
+                <div class="space-y-6">
+                    <div>
+                        <h3 class="text-xs font-bold uppercase tracking-widest text-slate-400 mb-3">Academic Affiliations</h3>
+                        <p class="text-sm text-slate-600">Engineering @ UWaterloo</p>
+                    </div>
 
-            <nav class="flex-1 space-y-2 mt-6">
-                <a href="#build" class="nav-link flex items-center gap-3 p-3 rounded-xl transition-all font-bold text-sm uppercase tracking-wider">
-                    <i class="fas fa-hammer w-5"></i> What I Build
-                </a>
-                <a href="#experience" class="nav-link flex items-center gap-3 p-3 rounded-xl transition-all font-bold text-sm uppercase tracking-wider">
-                    <i class="fas fa-bullhorn w-5"></i> What I experienced
-                </a>
-                <a href="#skills" class="nav-link flex items-center gap-3 p-3 rounded-xl transition-all font-bold text-sm uppercase tracking-wider">
-                    <i class="fas fa-code w-5"></i> Skillset
-                </a>
-            </nav>
-
-            <div class="mt-auto flex gap-5 pt-8 border-t border-black/10 justify-between md:justify-start">
-                <a href="https://github.com/lukasnaknak" target="_blank" class="hover:scale-125 transition-transform text-black"><i class="fab fa-github fa-xl"></i></a>
-                <a href="https://www.linkedin.com/in/lukas-li-25875638b/" target="_blank" class="hover:scale-125 transition-transform text-black hover:text-[#0077B5]"><i class="fab fa-linkedin fa-xl"></i></a>
-                <a href="https://www.instagram.com/chunxio.oias/" target="_blank" class="hover:scale-125 transition-transform text-black hover:text-[#E4405F]"><i class="fab fa-instagram fa-xl"></i></a>
-                <a href="mailto:b532li@uwaterloo.ca" class="hover:scale-125 transition-transform text-black hover:text-blue-600"><i class="fas fa-envelope fa-xl"></i></a>
+                    <div>
+                        <h3 class="text-xs font-bold uppercase tracking-widest text-slate-400 mb-3">Contact me!</h3>
+                        <div class="flex gap-5">
+                            <a href="https://github.com/lukasnaknak" target="_blank" class="text-slate-400 hover:text-black transition-colors"><i class="fab fa-github fa-xl"></i></a>
+                            <a href="https://www.linkedin.com/in/lukas-li-25875638b/" target="_blank" class="text-slate-400 hover:text-[#0077B5] transition-colors"><i class="fab fa-linkedin fa-xl"></i></a>
+                            <a href="https://www.instagram.com/chunxio.oias/" target="_blank" class="text-slate-400 hover:text-[#E4405F] transition-colors"><i class="fab fa-instagram fa-xl"></i></a>
+                            <a href="mailto:b532li@uwaterloo.ca" class="text-slate-400 hover:text-blue-600 transition-colors"><i class="fas fa-envelope fa-xl"></i></a>
+                        </div>
+                    </div>
+                </div>
             </div>
         </aside>
 
-        <main class="flex-1 p-6 md:p-16 lg:p-24 max-w-7xl">
+        <main class="md:col-span-8">
             
-            <header class="mb-20">
-                <div class="inline-block bg-yellow-400/20 text-yellow-700 text-[10px] font-black px-3 py-1 rounded-full mb-6 tracking-widest uppercase">
-                    First Year Biomedical Engineering @ UWaterloo
+            <section id="about" class="mb-20">
+                <h2 class="text-2xl font-bold section-title">About Me</h2>
+                <div class="prose prose-slate text-slate-600 leading-relaxed">
+                    <p class="text-xl text-black font-semibold mb-4">Hey 👋</p>
+                    <p class="mb-4">I am a First Year Biomedical Engineering student at the <strong>University of Waterloo</strong>. I explore the intersection of <span class="text-black font-medium">technical design</span> and <span class="text-black font-medium">human experience</span>.</p>
+                    <p>I focus on leveraging engineering precision to solve real-world problems, from accessibility-focused medical designs to complex mechanical modeling.</p>
                 </div>
-                <h2 class="text-4xl md:text-5xl font-black mb-6 tracking-tighter leading-tight max-w-3xl">
-                    Exploring the intersection of <span class="text-yellow-500">technical design</span> and <span class="text-blue-600">human experience</span>.
-                </h2>
-            </header>
+            </section>
 
-            <section id="build" class="mb-32">
-                <div class="flex items-center gap-4 mb-12">
-                    <span class="text-xs font-black bg-black text-white px-2 py-1 uppercase tracking-widest">01</span>
-                    <h2 class="text-4xl font-black tracking-tighter uppercase text-black">The projects</h2>
-                </div>
-                
-                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <section id="build" class="mb-20">
+                <h2 class="text-2xl font-bold section-title">Project Spotlight</h2>
+                <div class="space-y-16">
                     
-                    <div class="bg-white border border-slate-200 rounded-[2rem] card-hover shadow-sm overflow-hidden flex flex-col">
-                        <div class="h-48 bg-slate-100 relative overflow-hidden group">
-                            <img src="goose puzzle.jpg" alt="Goose Design" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+                    <div class="group">
+                        <div class="flex justify-between items-baseline mb-4">
+                            <h3 class="text-xl font-bold underline decoration-slate-200 underline-offset-8">Mechanical "Goose" Puzzle</h3>
+                            <span class="text-[10px] font-bold text-slate-400 uppercase tracking-widest">CAD & FAB</span>
                         </div>
-                        <div class="p-6 flex-1 flex flex-col justify-between">
-                            <div>
-                                <div class="text-slate-200 mb-2 font-bold tracking-tighter text-3xl uppercase leading-none">CAD & FAB</div>
-                                <h3 class="text-xl font-black mb-3 uppercase leading-tight">Mechanical "Goose" Puzzle</h3>
-                                <p class="text-slate-600 text-[11px] mb-6 leading-relaxed">Engineered a multi-part 3D-printable puzzle with movable wings using SolidWorks modeling.</p>
-                            </div>
-                            <a href="https://github.com/lukasnaknak" target="_blank" class="inline-flex items-center gap-2 text-xs font-black border-b-2 border-yellow-400 pb-1 hover:text-yellow-600 w-fit">
-                                <i class="fab fa-github"></i> VIEW REPO
-                            </a>
+                        <div class="h-64 mb-4 overflow-hidden rounded-2xl border border-slate-100">
+                            <img src="goose puzzle.jpg" alt="Goose Design" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105">
                         </div>
+                        <p class="text-slate-600 text-sm leading-relaxed mb-4">Engineered a multi-part 3D-printable puzzle with movable wings using SolidWorks modeling.</p>
+                        <a href="https://github.com/lukasnaknak" class="text-xs font-bold text-blue-600 hover:underline">View Repository ↗</a>
                     </div>
 
-<div class="bg-white border border-slate-200 rounded-[2rem] card-hover shadow-sm overflow-hidden flex flex-col">
-    <div class="h-48 bg-slate-100 relative overflow-hidden group">
-        <video 
-            id="jetVideo"
-            class="w-full h-full object-cover cursor-pointer transition-transform duration-500 group-hover:scale-110"
-            poster="airjet.jpg"
-        >
-            <source src="SolidWorks toy project.mp4" type="video/mp4">
-            Your browser does not support the video tag.
-        </video>
-    </div>
-    <div class="p-6 flex-1 flex flex-col justify-between">
-        <div>
-            <div class="text-slate-200 mb-2 font-bold tracking-tighter text-3xl uppercase leading-none">Toy Design</div>
-            <h3 class="text-xl font-black mb-3 uppercase leading-tight">Air Jetplane Concept</h3>
-            <p class="text-slate-600 text-[11px] mb-6 leading-relaxed">Developed complex surfacing and aerodynamic geometries in SolidWorks for a precision toy jet model.</p>
-        </div>
-        <a href="https://github.com/lukasnaknak" target="_blank" class="inline-flex items-center gap-2 text-xs font-black border-b-2 border-yellow-400 pb-1 hover:text-yellow-600 w-fit">
-            <i class="fab fa-github"></i> VIEW REPO
-        </a>
-    </div>
-</div>
+                    <div class="group">
+                        <div class="flex justify-between items-baseline mb-4">
+                            <h3 class="text-xl font-bold underline decoration-slate-200 underline-offset-8">Air Jetplane Concept</h3>
+                            <span class="text-[10px] font-bold text-slate-400 uppercase tracking-widest">Toy Design</span>
+                        </div>
+                        <div class="h-64 mb-4 overflow-hidden rounded-2xl border border-slate-100">
+                            <video id="jetVideo" class="w-full h-full object-cover cursor-pointer" poster="airjet.jpg">
+                                <source src="SolidWorks toy project.mp4" type="video/mp4">
+                            </video>
+                        </div>
+                        <p class="text-slate-600 text-sm leading-relaxed mb-4">Developed complex surfacing and aerodynamic geometries in SolidWorks for a precision toy jet model.</p>
+                        <a href="https://github.com/lukasnaknak" class="text-xs font-bold text-blue-600 hover:underline">View Repository ↗</a>
+                    </div>
 
-                    <div class="bg-white border border-slate-200 rounded-[2rem] card-hover shadow-sm overflow-hidden flex flex-col">
-                        <div class="h-48 bg-slate-100 relative flex overflow-hidden group">
-                            <div class="w-1/2 border-r border-white overflow-hidden">
-                                <img src="161 project concept sketch.jpg" alt="Cube Detail" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
-                            </div>
-                            <div class="w-1/2 overflow-hidden">
-                                <video autoplay muted loop playsinline class="w-full h-full object-cover object-top transition-transform duration-500 group-hover:scale-110">
-                                    <source src="Cubing system project.mp4" type="video/mp4">
-                                </video>
-                            </div>
+                    <div class="group">
+                        <div class="flex justify-between items-baseline mb-4">
+                            <h3 class="text-xl font-bold underline decoration-slate-200 underline-offset-8">Inclusive Cubing System</h3>
+                            <span class="text-[10px] font-bold text-slate-400 uppercase tracking-widest">Biomedical</span>
                         </div>
-                        <div class="p-6 flex-1 flex flex-col justify-between">
-                            <div>
-                                <div class="text-slate-200 mb-2 font-bold tracking-tighter text-3xl uppercase leading-none">Biomedical</div>
-                                <h3 class="text-xl font-black mb-3 uppercase leading-tight">Inclusive Cubing System</h3>
-                                <p class="text-slate-600 text-[11px] mb-6 leading-relaxed">Accessibility-focused Rubik’s cube design for amputees. Combined tactile engineering with user-testing.</p>
-                            </div>
-                            <a href="https://github.com/lukasnaknak" target="_blank" class="inline-flex items-center gap-2 text-xs font-black border-b-2 border-yellow-400 pb-1 hover:text-yellow-600 w-fit">
-                                <i class="fab fa-github"></i> VIEW REPO
-                            </a>
+                        <div class="flex gap-4 h-64 mb-4">
+                            <img src="161 project concept sketch.jpg" alt="Cube Detail" class="w-1/2 object-cover rounded-2xl border border-slate-100">
+                            <video autoplay muted loop playsinline class="w-1/2 object-cover rounded-2xl border border-slate-100 object-top">
+                                <source src="Cubing system project.mp4" type="video/mp4">
+                            </video>
                         </div>
+                        <p class="text-slate-600 text-sm leading-relaxed mb-4">Accessibility-focused Rubik’s cube design for amputees. Combined tactile engineering with ergonomic user-testing.</p>
+                        <a href="https://github.com/lukasnaknak" class="text-xs font-bold text-blue-600 hover:underline">View Repository ↗</a>
                     </div>
                 </div>
             </section>
 
-<section id="experience" class="mb-32">
-                <div class="flex items-center gap-4 mb-10">
-                    <span class="text-xs font-black bg-blue-600 text-white px-2 py-1 uppercase">02</span>
-                    <h2 class="text-3xl font-black text-blue-600 uppercase"> experience</h2>
-                </div>
-                
-                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-                    <div class="bg-blue-50 p-6 rounded-2xl border border-blue-100 shadow-sm hover:shadow-md transition-shadow">
-                        <div class="w-10 h-10 bg-blue-600 text-white rounded-lg flex items-center justify-center mb-4">
-                            <i class="fas fa-tools"></i>
-                        </div>
+            <section id="experience" class="mb-20">
+                <h2 class="text-2xl font-bold section-title">Experience</h2>
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                    <div class="p-6 border border-slate-100 rounded-2xl">
                         <h4 class="font-bold mb-2">Handcrafting</h4>
-                        <p class="text-[11px] text-slate-600 leading-relaxed">Applying engineering precision to physical hobbyist builds and manual arts, focusing on the tangibility of design.</p>
+                        <p class="text-xs text-slate-500 leading-relaxed">Applying engineering precision to physical hobbyist builds and manual arts.</p>
                     </div>
-
-                    <div class="bg-blue-50 p-6 rounded-2xl border border-blue-100 shadow-sm hover:shadow-md transition-shadow">
-                        <div class="w-10 h-10 bg-blue-600 text-white rounded-lg flex items-center justify-center mb-4">
-                            <i class="fas fa-comments"></i>
-                        </div>
+                    <div class="p-6 border border-slate-100 rounded-2xl">
                         <h4 class="font-bold mb-2">Mentoring</h4>
-                        <p class="text-[11px] text-slate-600 leading-relaxed">Assisting newcomers at Don Mills CI through cultural exchange, leadership, and adaptive activities.</p>
+                        <p class="text-xs text-slate-500 leading-relaxed">Assisting newcomers at Don Mills CI through cultural exchange and leadership.</p>
                     </div>
-
-                    <div class="bg-blue-50 p-6 rounded-2xl border border-blue-100 shadow-sm hover:shadow-md transition-shadow">
-                        <div class="w-10 h-10 bg-blue-600 text-white rounded-lg flex items-center justify-center mb-4">
-                            <i class="fas fa-landmark"></i>
-                        </div>
+                    <div class="p-6 border border-slate-100 rounded-2xl">
                         <h4 class="font-bold mb-2">Guiding</h4>
-                        <p class="text-[11px] text-slate-600 leading-relaxed">Volunteering as a docent in Tianjin Museum to share history and culture with diverse audiences.</p>
+                        <p class="text-xs text-slate-500 leading-relaxed">Docent in Tianjin Museum sharing history and culture with diverse audiences.</p>
                     </div>
-
-                    <div class="bg-blue-50 p-6 rounded-2xl border border-blue-100 shadow-sm hover:shadow-md transition-shadow">
-                        <div class="w-10 h-10 bg-blue-600 text-white rounded-lg flex items-center justify-center mb-4">
-                            <i class="fas fa-hat-wizard"></i>
-                        </div>
+                    <div class="p-6 border border-slate-100 rounded-2xl">
                         <h4 class="font-bold mb-2">Magic</h4>
-                        <p class="text-[11px] text-slate-600 leading-relaxed">Performing stage & close-up magic to engage, inspire, and build rapport with youth audiences.</p>
+                        <p class="text-xs text-slate-500 leading-relaxed">Performing stage magic to engage and inspire youth audiences.</p>
                     </div>
                 </div>
             </section>
 
-            <section id="skills" class="mb-24 bg-zinc-900 text-white p-10 md:p-16 rounded-[3rem] shadow-2xl">
-                <h3 class="text-2xl font-black mb-12 italic uppercase tracking-widest text-yellow-400">Skillset</h3>
-                <div class="grid grid-cols-2 md:grid-cols-4 gap-12">
+            <section id="skills" class="mb-20">
+                <h2 class="text-2xl font-bold section-title">Skillset</h2>
+                <div class="grid grid-cols-2 sm:grid-cols-4 gap-8">
                     <div>
-                        <p class="text-zinc-500 text-[10px] font-black mb-4 uppercase">Technical</p>
-                        <ul class="text-sm font-medium space-y-2"><li>C++ / GitHub</li><li>SolidWorks</li><li>3D Printing</li></ul>
+                        <h4 class="text-[10px] font-bold text-slate-400 uppercase tracking-widest mb-3">Technical</h4>
+                        <ul class="text-sm space-y-1 text-slate-700"><li>C++ / GitHub</li><li>SolidWorks</li><li>3D Printing</li></ul>
                     </div>
                     <div>
-                        <p class="text-zinc-500 text-[10px] font-black mb-4 uppercase">Languages</p>
-                        <ul class="text-sm font-medium space-y-2"><li>English </li><li>Mandarin (Native)</li></ul>
+                        <h4 class="text-[10px] font-bold text-slate-400 uppercase tracking-widest mb-3">Languages</h4>
+                        <ul class="text-sm space-y-1 text-slate-700"><li>English</li><li>Mandarin (Native)</li></ul>
                     </div>
                     <div>
-                        <p class="text-zinc-500 text-[10px] font-black mb-4 uppercase">Certifications</p>
-                        <ul class="text-sm font-medium space-y-2"><li>WHMIS</li><li>TPCS2</li></ul>
+                        <h4 class="text-[10px] font-bold text-slate-400 uppercase tracking-widest mb-3">Certifications</h4>
+                        <ul class="text-sm space-y-1 text-slate-700"><li>WHMIS</li><li>TPCS2</li></ul>
                     </div>
                     <div>
-                        <p class="text-zinc-500 text-[10px] font-black mb-4 uppercase">Interests</p>
-                        <ul class="text-sm font-medium space-y-2"><li>Magic</li><li>Handcrafting</li></ul>
+                        <h4 class="text-[10px] font-bold text-slate-400 uppercase tracking-widest mb-3">Interests</h4>
+                        <ul class="text-sm space-y-1 text-slate-700"><li>Magic</li><li>Handcrafting</li></ul>
                     </div>
                 </div>
             </section>
 
         </main>
     </div>
-    
-<script>
-    const video = document.getElementById("jetVideo");
 
-    video.addEventListener("click", function () {
-        if (video.paused) {
-            video.play();
-        } else {
-            video.pause();
-        }
-    });
-</script>
-    
+    <script>
+        const video = document.getElementById("jetVideo");
+        video.addEventListener("click", function () {
+            if (video.paused) { video.play(); } 
+            else { video.pause(); }
+        });
+    </script>
 </body>
 </html>
