@@ -29,74 +29,83 @@
     }
     .nav-link:hover { color: #000; }
     
-    /* Clean Black Line Cursor */
     .cursor {
         display: inline-block;
         width: 2px;
         height: 1.1em;
-        background-color: #000000; /* Force Black */
+        background-color: #000000;
         margin-left: 1px;
-        vertical-align: text-bottom; /* Better alignment with letters */
+        vertical-align: text-bottom;
         animation: blink 1s step-end infinite;
     }
 
-    /* Fixed animation: No blue, just simple visibility toggle */
     @keyframes blink {
         from, to { opacity: 1; }
         50% { opacity: 0; }
     }
 
-    /* Prevents layout jump when text wraps */
     #typewriter {
         white-space: pre-wrap;
         word-break: break-word;
     }
 </style>
 </head>
-<body class="max-w-6xl mx-auto px-6 py-12">
+<body class="py-12"> <div class="max-w-[1400px] mx-auto px-6"> <header class="flex justify-between items-center mb-20">
+        <h1 class="text-3xl font-extrabold tracking-tighter">Lukas Li</h1>
+        <nav class="flex gap-8">
+            <a href="#about" class="nav-link">Home</a>
+            <a href="#build" class="nav-link">Projects</a>
+            <a href="#experience" class="nav-link">Experience</a>
+            <a href="#skills" class="nav-link">Skills</a>
+        </nav>
+    </header>
 
-<header class="flex justify-between items-center mb-20">
-    <h1 class="text-3xl font-extrabold tracking-tighter">Lukas Li</h1>
-    <nav class="flex gap-8">
-        <a href="#about" class="nav-link">Home</a>
-        <a href="#build" class="nav-link">Projects</a>
-        <a href="#experience" class="nav-link">Experience</a>
-        <a href="#skills" class="nav-link">Skills</a>
-    </nav>
-</header>
+    <div class="grid grid-cols-1 md:grid-cols-12 gap-8 lg:gap-24">
+        
+        <aside class="md:col-span-3">
+            <div class="sticky top-12">
+                <div class="w-48 h-48 rounded-full overflow-hidden border border-slate-200 mb-8 shadow-sm">
+                    <img src="profile.jpg" alt="Lukas Li" class="w-full h-full object-cover">
+                </div>
 
-<div class="max-w-7xl mx-auto px-4 grid grid-cols-1 md:grid-cols-12 gap-8 lg:gap-16">
-    
-    <aside class="md:col-span-3 lg:col-span-3">
-        <div class="sticky top-12">
-            <div class="w-48 h-48 rounded-full overflow-hidden border border-slate-200 mb-8 shadow-sm">
-                <img src="profile.jpg" alt="Lukas Li" class="w-full h-full object-cover">
-            </div>
+                <div class="mb-8">
+                    <h2 class="text-black font-bold text-xl min-h-[3.5em] leading-tight">
+                        <span id="typewriter"></span><span class="cursor"></span>
+                    </h2>
+                    <p class="text-slate-500 text-sm">1A Biomedical Engineering @ Waterloo</p>
+                </div>
 
-            <div class="mb-8">
-                <h2 class="text-black font-bold text-xl min-h-[3em] leading-tight">
-                    <span id="typewriter"></span><span class="cursor"></span>
-                </h2>
-                <p class="text-slate-600">First Year @ Waterloo</p>
-            </div>
+<div class="mb-10">
+    <h3 class="text-[10px] font-bold uppercase tracking-widest text-slate-400 mb-4">Academic Affiliations</h3>
+    <ul class="space-y-3 text-sm">
+        <li class="flex items-center gap-2">
+            <a href="https://uwaterloo.ca/biomedical-engineering/" 
+               target="_blank" 
+               class="font-bold text-blue-600 border-b border-blue-200 hover:text-blue-800 hover:border-blue-800 transition-colors">
+                BME
+            </a>
+            <span class="text-slate-500">@ Waterloo</span>
+        </li>
+    </ul>
+</div>
 
                 <div>
-                    <h3 class="text-xs font-bold uppercase tracking-widest text-slate-400 mb-3">Contact me!</h3>
+                    <h3 class="text-[10px] font-bold uppercase tracking-widest text-slate-400 mb-4">Contact me!</h3>
                     <div class="flex gap-5">
-                        <a href="https://github.com/lukasnaknak" target="_blank" class="text-slate-400 hover:text-black transition-colors"><i class="fab fa-github fa-xl"></i></a>
-                        <a href="https://www.linkedin.com/in/lukas-li-25875638b/" target="_blank" class="text-slate-400 hover:text-[#0077B5] transition-colors"><i class="fab fa-linkedin fa-xl"></i></a>
-                        <a href="https://www.instagram.com/chunxio.oias/" target="_blank" class="text-slate-400 hover:text-[#E4405F] transition-colors"><i class="fab fa-instagram fa-xl"></i></a>
-                        <a href="mailto:b532li@uwaterloo.ca" class="text-slate-400 hover:text-blue-600 transition-colors"><i class="fas fa-envelope fa-xl"></i></a>
+                        <a href="https://github.com/lukasnaknak" target="_blank" class="text-slate-400 hover:text-black transition-colors"><i class="fab fa-github fa-lg"></i></a>
+                        <a href="https://www.linkedin.com/in/lukas-li-25875638b/" target="_blank" class="text-slate-400 hover:text-[#0077B5] transition-colors"><i class="fab fa-linkedin fa-lg"></i></a>
+                        <a href="https://www.instagram.com/chunxio.oias/" target="_blank" class="text-slate-400 hover:text-[#E4405F] transition-colors"><i class="fab fa-instagram fa-lg"></i></a>
+                        <a href="mailto:b532li@uwaterloo.ca" class="text-slate-400 hover:text-blue-600 transition-colors"><i class="fas fa-envelope fa-lg"></i></a>
                     </div>
                 </div>
             </div>
         </aside>
 
-        <main class="md:col-span-8 lg:col-span-9">
+        <main class="md:col-span-9">
             
             <section id="about" class="mb-20">
                 <h2 class="text-2xl font-bold section-title">About Me</h2>
-                <div class="prose prose-slate text-slate-600 leading-relaxed">
+                <div class="prose prose-slate text-slate-600 leading-relaxed max-w-3xl">
                     <p class="text-xl text-black font-semibold mb-4">Hey👋</p>
                     <p class="mb-4">
                         I am a <strong>Biomedical Engineering student at the University of Waterloo</strong> with an avid interest in the intersection of technical design, software development, and human-centric engineering. I am driven by the challenge of translating complex concepts into tangible solutions—whether through physical prototypes or digital systems.
@@ -141,33 +150,28 @@
                         </div>
                     </div>
                     
-        <div class="relative pl-8">
-            <div class="absolute -left-[9px] top-1 w-4 h-4 rounded-full border-2 border-blue-600 bg-white"></div>
-            
-            <div class="group">
-                <div class="flex flex-wrap items-center gap-2 mb-2">
-                    <a href="https://drive.google.com/file/d/18AT7HsMv-8o6NW_TWPmeTGeQnVIUUY58/view?usp=sharing" target="_blank" class="text-lg font-bold text-blue-600 hover:underline decoration-blue-400 underline-offset-4 transition-all">
-                        Inclusive Cubing System
-                    </a>
-                    <span class="px-2 py-0.5 text-[10px] font-bold text-white bg-red-500 rounded uppercase">Coursework</span>
+                    <div class="relative pl-8">
+                        <div class="absolute -left-[9px] top-1 w-4 h-4 rounded-full border-2 border-blue-600 bg-white"></div>
+                        <div class="group">
+                            <div class="flex flex-wrap items-center gap-2 mb-2">
+                                <a href="https://drive.google.com/file/d/18AT7HsMv-8o6NW_TWPmeTGeQnVIUUY58/view?usp=sharing" target="_blank" class="text-lg font-bold text-blue-600 hover:underline decoration-blue-400 underline-offset-4 transition-all">Inclusive Cubing System ↗</a>
+                                <span class="px-2 py-0.5 text-[10px] font-bold text-white bg-red-500 rounded uppercase">Coursework</span>
+                            </div>
+                            <div class="flex gap-4 h-56 mb-4">
+                                <div class="w-1/2 rounded-xl border border-slate-100 overflow-hidden">
+                                    <img src="161 project concept sketch.jpg" alt="Sketch" class="w-full h-full object-cover">
+                                </div>
+                                <div class="w-1/2 bg-slate-50 rounded-xl border border-slate-100 flex items-center justify-center overflow-hidden">
+                                    <video autoplay muted loop playsinline class="max-w-full max-h-full object-contain">
+                                        <source src="Cubing system project.mp4" type="video/mp4">
+                                    </video>
+                                </div>
+                            </div>
+                            <p class="text-slate-600 text-sm mb-2 leading-relaxed">Created a modular tactile system for upper-limb amputees to engage in speedcubing.</p>
+                        </div>
+                    </div>
                 </div>
-                
-                <a href="https://drive.google.com/file/d/18AT7HsMv-8o6NW_TWPmeTGeQnVIUUY58/view?usp=sharing" target="_blank" class="flex gap-4 h-56 mb-4 group-hover:shadow-md transition-shadow">
-                    <div class="w-1/2 rounded-xl border border-slate-100 overflow-hidden">
-                        <img src="161 project concept sketch.jpg" alt="Sketch" class="w-full h-full object-cover">
-                    </div>
-                    <div class="w-1/2 bg-slate-50 rounded-xl border border-slate-100 flex items-center justify-center overflow-hidden">
-                        <video autoplay muted loop playsinline class="max-w-full max-h-full object-contain">
-                            <source src="Cubing system project.mp4" type="video/mp4">
-                        </video>
-                    </div>
-                </a>
-                <p class="text-slate-600 text-sm mb-2 leading-relaxed">Created a modular tactile system for upper-limb amputees to engage in speedcubing.</p>
-            </div>
-        </div>
-
-    </div>
-</section>
+            </section>
 
             <section id="experience" class="mb-20">
                 <h2 class="text-2xl font-bold section-title">Experience</h2>
@@ -212,9 +216,9 @@
                     </div>
                 </div>
             </section>
-
         </main>
     </div>
+</div>
 
 <script>
     const messages = [
@@ -228,10 +232,9 @@
     let charIndex = 0;
     let isDeleting = false;
 
-    // --- SPEED SETTINGS (Larger number = Slower) ---
-    const typeSpeed = 150;   // Slow, rhythmic typing
-    const eraseSpeed = 100;  // Gentle deleting
-    const waitTime = 3000;   // 3 seconds pause after finishing a word
+    const typeSpeed = 150;
+    const eraseSpeed = 100;
+    const waitTime = 3000;
 
     function handleTyping() {
         const target = document.getElementById("typewriter");
@@ -246,19 +249,14 @@
         }
         
         if (!isDeleting && charIndex === currentMsg.length) {
-            // Word is finished
             isDeleting = true;
             setTimeout(handleTyping, waitTime);
         } else if (isDeleting && charIndex === 0) {
-            // Word is gone
             isDeleting = false;
             msgIndex = (msgIndex + 1) % messages.length;
-            setTimeout(handleTyping, 800); // Short pause before starting next word
+            setTimeout(handleTyping, 800);
         } else {
-            // Adjust speed based on whether it's typing or deleting
             const currentSpeed = isDeleting ? eraseSpeed : typeSpeed;
-            
-            // Add a little "randomness" to make it look like a human is typing
             const jitter = Math.random() * 50; 
             setTimeout(handleTyping, currentSpeed + jitter);
         }
