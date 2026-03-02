@@ -6,31 +6,49 @@
     <title>Lukas Li | Engineering Builder & Product Designer</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <style>
-        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap');
-        body { 
-            font-family: 'Inter', sans-serif; 
-            background-color: #ffffff; 
-            color: #1a1a1a;
-            scroll-behavior: smooth;
-        }
-        .section-title { border-bottom: 1px solid #eee; padding-bottom: 0.5rem; margin-bottom: 2rem; }
-        .nav-link { color: #666; transition: color 0.2s; font-size: 0.875rem; }
-        .nav-link:hover { color: #000; }
-        
-        /* Blinking cursor for typewriter */
-        .cursor {
-            display: inline-block;
-            width: 3px;
-            background-color: #2563eb;
-            margin-left: 2px;
-            animation: blink 1s step-end infinite;
-        }
-        @keyframes blink {
-            from, to { background-color: transparent; }
-            50% { background-color: #2563eb; }
-        }
-    </style>
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap');
+    
+    body { 
+        font-family: 'Inter', sans-serif; 
+        background-color: #ffffff; 
+        color: #1a1a1a;
+        scroll-behavior: smooth;
+    }
+
+    /* Minimalist section headers */
+    .section-title { 
+        border-bottom: 1px solid #eee; 
+        padding-bottom: 0.5rem; 
+        margin-bottom: 2rem; 
+    }
+
+    /* Navigation styling */
+    .nav-link { 
+        color: #666; 
+        transition: color 0.2s; 
+        font-size: 0.875rem; 
+    }
+    .nav-link:hover { 
+        color: #000; 
+    }
+    
+    /* NEW: Black Vertical Typing Line */
+    .cursor {
+        display: inline-block;
+        width: 2px; /* Thinner line like a text editor */
+        height: 1.2em;
+        background-color: #000000; /* Pure black */
+        margin-left: 3px;
+        vertical-align: middle;
+        animation: blink 1.2s step-end infinite;
+    }
+
+    @keyframes blink {
+        from, to { opacity: 1; }
+        50% { opacity: 0; }
+    }
+</style>
 </head>
 <body class="max-w-6xl mx-auto px-6 py-12">
 
@@ -205,42 +223,55 @@
         </main>
     </div>
 
-    <script>
-        const messages = [
-            "Undergrad Student",
-            "Biomedical Engineering",
-            "Aspiring Student of Knowledge",
-            "Pretend to know how to do magic"
-        ];
+<script>
+    const messages = [
+        "Undergrad Student",
+        "Biomedical Engineering",
+        "Aspiring Student of Knowledge",
+        "Pretend to know how to do magic"
+    ];
+    
+    let msgIndex = 0;
+    let charIndex = 0;
+    let isDeleting = false;
+
+    // --- SPEED SETTINGS (Larger number = Slower) ---
+    const typeSpeed = 150;   // Slow, rhythmic typing
+    const eraseSpeed = 100;  // Gentle deleting
+    const waitTime = 3000;   // 3 seconds pause after finishing a word
+
+    function handleTyping() {
+        const target = document.getElementById("typewriter");
+        const currentMsg = messages[msgIndex];
         
-        let msgIndex = 0;
-        let charIndex = 0;
-        let isDeleting = false;
-        
-        function handleTyping() {
-            const target = document.getElementById("typewriter");
-            const currentMsg = messages[msgIndex];
-            
-            if (isDeleting) {
-                target.textContent = currentMsg.substring(0, charIndex - 1);
-                charIndex--;
-            } else {
-                target.textContent = currentMsg.substring(0, charIndex + 1);
-                charIndex++;
-            }
-            
-            if (!isDeleting && charIndex === currentMsg.length) {
-                isDeleting = true;
-                setTimeout(handleTyping, 2000);
-            } else if (isDeleting && charIndex === 0) {
-                isDeleting = false;
-                msgIndex = (msgIndex + 1) % messages.length;
-                setTimeout(handleTyping, 500);
-            } else {
-                setTimeout(handleTyping, isDeleting ? 40 : 80);
-            }
+        if (isDeleting) {
+            target.textContent = currentMsg.substring(0, charIndex - 1);
+            charIndex--;
+        } else {
+            target.textContent = currentMsg.substring(0, charIndex + 1);
+            charIndex++;
         }
-        document.addEventListener("DOMContentLoaded", handleTyping);
-    </script>
+        
+        if (!isDeleting && charIndex === currentMsg.length) {
+            // Word is finished
+            isDeleting = true;
+            setTimeout(handleTyping, waitTime);
+        } else if (isDeleting && charIndex === 0) {
+            // Word is gone
+            isDeleting = false;
+            msgIndex = (msgIndex + 1) % messages.length;
+            setTimeout(handleTyping, 800); // Short pause before starting next word
+        } else {
+            // Adjust speed based on whether it's typing or deleting
+            const currentSpeed = isDeleting ? eraseSpeed : typeSpeed;
+            
+            // Add a little "randomness" to make it look like a human is typing
+            const jitter = Math.random() * 50; 
+            setTimeout(handleTyping, currentSpeed + jitter);
+        }
+    }
+
+    document.addEventListener("DOMContentLoaded", handleTyping);
+</script>
 </body>
 </html>
