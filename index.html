@@ -29,25 +29,26 @@
     }
     .nav-link:hover { color: #000; }
     
-    .cursor {
-        display: inline-block;
-        width: 2px;
-        height: 1.1em;
-        background-color: #000000;
-        margin-left: 1px;
-        vertical-align: text-bottom;
-        animation: blink 1s step-end infinite;
-    }
+.cursor {
+    display: inline-block;
+    width: 2px;
+    height: 1.1em;
+    background-color: #000000; 
+    margin-left: 2px;
+    vertical-align: text-bottom;
+    animation: blink 1s step-end infinite;
+}
 
-    @keyframes blink {
-        from, to { opacity: 1; }
-        50% { opacity: 0; }
-    }
+@keyframes blink {
+    from, to { opacity: 1; }
+    50% { opacity: 0; }
+}
 
-    #typewriter {
-        white-space: pre-wrap;
-        word-break: break-word;
-    }
+#typewriter {
+    color: #2563eb; 
+    white-space: pre-wrap;
+    word-break: break-word;
+}
 </style>
 </head>
 <body class="py-12"> <div class="max-w-[1400px] mx-auto px-6"> <header class="flex justify-between items-center mb-20">
@@ -68,12 +69,12 @@
                     <img src="profile.jpg" alt="Lukas Li" class="w-full h-full object-cover">
                 </div>
 
-                <div class="mb-8">
-                    <h2 class="text-black font-bold text-xl min-h-[3.5em] leading-tight">
-                        <span id="typewriter"></span><span class="cursor"></span>
-                    </h2>
-                    <p class="text-slate-500 text-sm">1A Biomedical Engineering @ Waterloo</p>
-                </div>
+<div class="mb-8">
+    <h2 class="font-bold text-xl min-h-[3.5em] leading-tight">
+        <span id="typewriter"></span><span class="cursor"></span>
+    </h2>
+    <p class="text-slate-500 text-sm">1A Biomedical Engineering @ Waterloo</p>
+</div>
 
 <div class="mb-10">
     <h3 class="text-[10px] font-bold uppercase tracking-widest text-slate-400 mb-4">Academic Affiliations</h3>
