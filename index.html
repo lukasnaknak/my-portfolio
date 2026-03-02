@@ -40,14 +40,41 @@
                     <img src="profile.jpg" alt="Lukas Li" class="w-full h-full object-cover object-[70%_20%]">
                 </div>
                 
-                <h2 class="text-xl font-bold text-blue-600 mb-1">Engineering Student</h2>
-                <p class="text-slate-500 text-sm mb-6">1A Biomedical Engineering @ Waterloo</p>
+<div class="mb-8">
+    <h2 class="text-blue-600 font-bold text-xl min-h-[1.5em] flex items-center">
+        <span id="typewriter"></span><span class="cursor">|</span>
+    </h2>
+    <p class="text-slate-600">First Year @ Waterloo</p>
+</div>
+
+<style>
+    /* Styling the blinking cursor to match the PhD screenshot */
+    .cursor {
+        display: inline-block;
+        width: 3px;
+        background-color: #2563eb;
+        margin-left: 2px;
+        animation: blink 1s step-end infinite;
+    }
+    @keyframes blink {
+        from, to { color: transparent; background-color: transparent; }
+        50% { color: #2563eb; background-color: #2563eb; }
+    }
+</style>
                 
-                <div class="space-y-6">
-                    <div>
-                        <h3 class="text-xs font-bold uppercase tracking-widest text-slate-400 mb-3">Academic Affiliations</h3>
-                        <p class="text-sm text-slate-600">Engineering @ UWaterloo</p>
-                    </div>
+<div>
+    <h3 class="text-xs font-bold uppercase tracking-widest text-slate-400 mb-3">Academic Affiliations</h3>
+    <ul class="space-y-2 text-sm">
+        <li class="flex items-center gap-1">
+            <a href="https://uwaterloo.ca/biomedical-engineering/" 
+               target="_blank" 
+               class="text-blue-600 hover:underline decoration-dotted underline-offset-4 font-medium">
+               BME
+            </a>
+            <span class="text-slate-600">@ Waterloo</span>
+        </li>
+    </ul>
+</div>
 
                     <div>
                         <h3 class="text-xs font-bold uppercase tracking-widest text-slate-400 mb-3">Contact me!</h3>
@@ -204,5 +231,50 @@
             else { video.pause(); }
         });
     </script>
+
+    <script>
+    const messages = [
+        "Undergrad Student",
+        "Biomedical Engineering",
+        "Aspiring Student of Knowledge",
+        "Pretend to know how to do magic"
+    ];
+    
+    let msgIndex = 0;
+    let charIndex = 0;
+    let isDeleting = false;
+    const typeSpeed = 80;   // How fast it types
+    const eraseSpeed = 40;  // How fast it deletes
+    const waitTime = 2000;  // How long the message stays on screen
+
+    function handleTyping() {
+        const target = document.getElementById("typewriter");
+        const currentMsg = messages[msgIndex];
+        
+        if (isDeleting) {
+            target.textContent = currentMsg.substring(0, charIndex - 1);
+            charIndex--;
+        } else {
+            target.textContent = currentMsg.substring(0, charIndex + 1);
+            charIndex++;
+        }
+        
+        if (!isDeleting && charIndex === currentMsg.length) {
+            // Finished typing, pause
+            isDeleting = true;
+            setTimeout(handleTyping, waitTime);
+        } else if (isDeleting && charIndex === 0) {
+            // Finished deleting, move to next
+            isDeleting = false;
+            msgIndex = (msgIndex + 1) % messages.length;
+            setTimeout(handleTyping, 500);
+        } else {
+            // Continue typing/deleting
+            setTimeout(handleTyping, isDeleting ? eraseSpeed : typeSpeed);
+        }
+    }
+
+    document.addEventListener("DOMContentLoaded", handleTyping);
+</script>
 </body>
 </html>
