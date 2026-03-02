@@ -14,10 +14,22 @@
             color: #1a1a1a;
             scroll-behavior: smooth;
         }
-        /* Minimalist text styling like the PhD screenshot */
         .section-title { border-bottom: 1px solid #eee; padding-bottom: 0.5rem; margin-bottom: 2rem; }
         .nav-link { color: #666; transition: color 0.2s; font-size: 0.875rem; }
         .nav-link:hover { color: #000; }
+        
+        /* Blinking cursor for typewriter */
+        .cursor {
+            display: inline-block;
+            width: 3px;
+            background-color: #2563eb;
+            margin-left: 2px;
+            animation: blink 1s step-end infinite;
+        }
+        @keyframes blink {
+            from, to { background-color: transparent; }
+            50% { background-color: #2563eb; }
+        }
     </style>
 </head>
 <body class="max-w-6xl mx-auto px-6 py-12">
@@ -32,252 +44,134 @@
         </nav>
     </header>
 
-    <div class="grid grid-cols-1 md:grid-cols-12 gap-16">
+    <div class="grid grid-cols-1 md:grid-cols-12 gap-12 lg:gap-20">
         
-        <aside class="md:col-span-4">
-            <div class="sticky top-12">
+        <aside class="md:col-span-4 lg:col-span-3">
+            <div class="md:sticky md:top-12">
                 <div class="w-48 h-48 rounded-full overflow-hidden border border-slate-200 mb-8 shadow-sm">
                     <img src="profile.jpg" alt="Lukas Li" class="w-full h-full object-cover object-[70%_20%]">
                 </div>
                 
-<div class="mb-8">
-    <h2 class="text-blue-600 font-bold text-xl min-h-[1.5em] flex items-center">
-        <span id="typewriter"></span><span class="cursor">|</span>
-    </h2>
-    <p class="text-slate-600">First Year @ Waterloo</p>
-</div>
-
-<style>
-    /* Styling the blinking cursor to match the PhD screenshot */
-    .cursor {
-        display: inline-block;
-        width: 3px;
-        background-color: #2563eb;
-        margin-left: 2px;
-        animation: blink 1s step-end infinite;
-    }
-    @keyframes blink {
-        from, to { color: transparent; background-color: transparent; }
-        50% { color: #2563eb; background-color: #2563eb; }
-    }
-</style>
+                <div class="mb-8">
+                    <h2 class="text-blue-600 font-bold text-xl min-h-[1.5em] flex items-center">
+                        <span id="typewriter"></span><span class="cursor">|</span>
+                    </h2>
+                    <p class="text-slate-600 text-sm">First Year @ Waterloo</p>
+                </div>
                 
-<div>
-    <h3 class="text-xs font-bold uppercase tracking-widest text-slate-400 mb-3">Academic Affiliations</h3>
-    <ul class="space-y-2 text-sm">
-        <li class="flex items-center gap-1">
-            <a href="https://uwaterloo.ca/biomedical-engineering/" 
-               target="_blank" 
-               class="text-blue-600 hover:underline decoration-dotted underline-offset-4 font-medium">
-               BME
-            </a>
-            <span class="text-slate-600">@ Waterloo</span>
-        </li>
-    </ul>
-</div>
+                <div class="mb-10">
+                    <h3 class="text-xs font-bold uppercase tracking-widest text-slate-400 mb-3">Academic Affiliations</h3>
+                    <ul class="space-y-2 text-sm">
+                        <li class="flex items-center gap-1">
+                            <a href="https://uwaterloo.ca/biomedical-engineering/" target="_blank" class="text-blue-600 hover:underline decoration-dotted underline-offset-4 font-medium">BME</a>
+                            <span class="text-slate-600">@ Waterloo</span>
+                        </li>
+                    </ul>
+                </div>
 
-                    <div>
-                        <h3 class="text-xs font-bold uppercase tracking-widest text-slate-400 mb-3">Contact me!</h3>
-                        <div class="flex gap-5">
-                            <a href="https://github.com/lukasnaknak" target="_blank" class="text-slate-400 hover:text-black transition-colors"><i class="fab fa-github fa-xl"></i></a>
-                            <a href="https://www.linkedin.com/in/lukas-li-25875638b/" target="_blank" class="text-slate-400 hover:text-[#0077B5] transition-colors"><i class="fab fa-linkedin fa-xl"></i></a>
-                            <a href="https://www.instagram.com/chunxio.oias/" target="_blank" class="text-slate-400 hover:text-[#E4405F] transition-colors"><i class="fab fa-instagram fa-xl"></i></a>
-                            <a href="mailto:b532li@uwaterloo.ca" class="text-slate-400 hover:text-blue-600 transition-colors"><i class="fas fa-envelope fa-xl"></i></a>
-                        </div>
+                <div>
+                    <h3 class="text-xs font-bold uppercase tracking-widest text-slate-400 mb-3">Contact me!</h3>
+                    <div class="flex gap-5">
+                        <a href="https://github.com/lukasnaknak" target="_blank" class="text-slate-400 hover:text-black transition-colors"><i class="fab fa-github fa-xl"></i></a>
+                        <a href="https://www.linkedin.com/in/lukas-li-25875638b/" target="_blank" class="text-slate-400 hover:text-[#0077B5] transition-colors"><i class="fab fa-linkedin fa-xl"></i></a>
+                        <a href="https://www.instagram.com/chunxio.oias/" target="_blank" class="text-slate-400 hover:text-[#E4405F] transition-colors"><i class="fab fa-instagram fa-xl"></i></a>
+                        <a href="mailto:b532li@uwaterloo.ca" class="text-slate-400 hover:text-blue-600 transition-colors"><i class="fas fa-envelope fa-xl"></i></a>
                     </div>
                 </div>
             </div>
         </aside>
 
-<main class="md:col-span-8">
-    
-    <section id="about" class="mb-20">
-        <h2 class="text-2xl font-bold section-title">About Me</h2>
-        <div class="prose prose-slate text-slate-600 leading-relaxed">
-            <p class="text-xl text-black font-semibold mb-4">Hey👋</p>
+        <main class="md:col-span-8 lg:col-span-9">
             
-            <p class="mb-4">
-                I am a **Biomedical Engineering student at the University of Waterloo** with an avid interest in the intersection of technical design, software development, and human-centric engineering. I am driven by the challenge of translating complex concepts into tangible solutions—whether through physical prototypes or digital systems.
-            </p>
-
-            <p class="mb-6">
-                Beyond the technical stack, I bring a unique perspective from the world of stage magic and handcrafting. I apply the same meticulous attention to detail and user-engagement required for a performance to my engineering projects, ensuring every interaction—whether in code or in person—is seamless and functional.
-            </p>
-        </div>
-    </section>
-
-    <section id="build" class="mb-20">
-        <h2 class="text-2xl font-bold section-title">Project Spotlight</h2>
-        
-        <div class="relative border-l-2 border-slate-200 ml-3 space-y-12 pb-4">
-            
-            <div class="relative pl-8">
-                <div class="absolute -left-[9px] top-1 w-4 h-4 rounded-full border-2 border-blue-600 bg-white"></div>
-                
-                <div class="group">
-                    <div class="flex flex-wrap items-center gap-2 mb-2">
-                        <a href="https://drive.google.com/file/d/1zKSyePzr7DWllt40KFRKzid_UmZZiP0B/view?usp=sharing" target="_blank" class="text-lg font-bold text-blue-600 hover:underline decoration-blue-400 underline-offset-4 transition-all">
-                            Mechanical "Goose" Puzzle ↗
-                        </a>
-                        <span class="px-2 py-0.5 text-[10px] font-bold text-white bg-orange-500 rounded uppercase">Design</span>
-                        <span class="text-slate-400 text-sm">— 3D-printable assembly.</span>
-                    </div>
-                    
-                    <div class="h-56 mb-4 overflow-hidden rounded-xl border border-slate-100 bg-slate-50 flex items-center justify-center">
-                        <img src="goose puzzle.jpg" alt="Goose Design" class="max-w-full max-h-full object-contain">
-                    </div>
-                    <p class="text-slate-600 text-sm mb-2 leading-relaxed">Developed a complex interlocking mechanism in SolidWorks with movable wings, optimized for FDM tolerances.</p>
+            <section id="about" class="mb-20">
+                <h2 class="text-2xl font-bold section-title">About Me</h2>
+                <div class="prose prose-slate text-slate-600 leading-relaxed">
+                    <p class="text-xl text-black font-semibold mb-4">Hey👋</p>
+                    <p class="mb-4">
+                        I am a <strong>Biomedical Engineering student at the University of Waterloo</strong> with an avid interest in the intersection of technical design, software development, and human-centric engineering. I am driven by the challenge of translating complex concepts into tangible solutions—whether through physical prototypes or digital systems.
+                    </p>
+                    <p class="mb-6">
+                        Beyond the technical stack, I bring a unique perspective from the world of stage magic and handcrafting. I apply the same meticulous attention to detail and user-engagement required for a performance to my engineering projects.
+                    </p>
                 </div>
-            </div>
+            </section>
 
-            <div class="relative pl-8">
-                <div class="absolute -left-[9px] top-1 w-4 h-4 rounded-full border-2 border-blue-600 bg-white"></div>
-                
-                <div class="group">
-                    <div class="flex flex-wrap items-center gap-2 mb-2">
-                        <a href="https://drive.google.com/file/d/1q-6ybDIh6jM9n2vQM4FbTQGF-3Zxkeyl/view?usp=sharing" target="_blank" class="text-lg font-bold text-blue-600 hover:underline decoration-blue-400 underline-offset-4 transition-all">
-                            Air Jetplane Concept ↗
-                        </a>
-                        <span class="px-2 py-0.5 text-[10px] font-bold text-white bg-blue-500 rounded uppercase">CAD</span>
-                        <span class="text-slate-400 text-sm">— Precision toy modeling.</span>
-                    </div>
+            <section id="build" class="mb-20">
+                <h2 class="text-2xl font-bold section-title">Project Spotlight</h2>
+                <div class="relative border-l-2 border-slate-200 ml-3 space-y-12 pb-4">
                     
-                    <div class="h-56 mb-4 overflow-hidden rounded-xl border border-slate-100 bg-slate-50 flex items-center justify-center">
-                        <video class="max-w-full max-h-full object-contain" autoplay muted loop playsinline>
-                            <source src="SolidWorks toy project.mp4" type="video/mp4">
-                        </video>
-                    </div>
-                    <p class="text-slate-600 text-sm mb-2 leading-relaxed">Focus on aerodynamic geometries and high-fidelity surfacing in SolidWorks.</p>
-                </div>
-            </div>
-
-            <div class="relative pl-8">
-                <div class="absolute -left-[9px] top-1 w-4 h-4 rounded-full border-2 border-blue-600 bg-white"></div>
-                
-                <div class="group">
-                    <div class="flex flex-wrap items-center gap-2 mb-2">
-                        <a href="https://drive.google.com/file/d/18AT7HsMv-8o6NW_TWPmeTGeQnVIUUY58/view?usp=sharing" target="_blank" class="text-lg font-bold text-blue-600 hover:underline decoration-blue-400 underline-offset-4 transition-all">
-                            Inclusive Cubing System ↗
-                        </a>
-                        <span class="px-2 py-0.5 text-[10px] font-bold text-white bg-red-500 rounded uppercase">Coursework</span>
-                    </div>
-                    
-                    <div class="flex gap-4 h-56 mb-4">
-                        <div class="w-1/2 rounded-xl border border-slate-100 overflow-hidden">
-                            <img src="161 project concept sketch.jpg" alt="Sketch" class="w-full h-full object-cover">
-                        </div>
-                        <div class="w-1/2 bg-slate-50 rounded-xl border border-slate-100 flex items-center justify-center overflow-hidden">
-                            <video autoplay muted loop playsinline class="max-w-full max-h-full object-contain">
-                                <source src="Cubing system project.mp4" type="video/mp4">
-                            </video>
+                    <div class="relative pl-8">
+                        <div class="absolute -left-[9px] top-1 w-4 h-4 rounded-full border-2 border-blue-600 bg-white"></div>
+                        <div class="group">
+                            <div class="flex flex-wrap items-center gap-2 mb-2">
+                                <a href="https://drive.google.com/file/d/1zKSyePzr7DWllt40KFRKzid_UmZZiP0B/view?usp=sharing" target="_blank" class="text-lg font-bold text-blue-600 hover:underline decoration-blue-400 underline-offset-4 transition-all">Mechanical "Goose" Puzzle ↗</a>
+                                <span class="px-2 py-0.5 text-[10px] font-bold text-white bg-orange-500 rounded uppercase">Design</span>
+                            </div>
+                            <div class="h-64 mb-4 overflow-hidden rounded-xl border border-slate-100 bg-slate-50 flex items-center justify-center">
+                                <img src="goose puzzle.jpg" alt="Goose Design" class="max-w-full max-h-full object-contain">
+                            </div>
+                            <p class="text-slate-600 text-sm">Developed a complex interlocking mechanism in SolidWorks with movable wings.</p>
                         </div>
                     </div>
-                    <p class="text-slate-600 text-sm mb-2 leading-relaxed">Created a modular tactile system for upper-limb amputees to engage in speedcubing.</p>
+
+                    <div class="relative pl-8">
+                        <div class="absolute -left-[9px] top-1 w-4 h-4 rounded-full border-2 border-blue-600 bg-white"></div>
+                        <div class="group">
+                            <div class="flex flex-wrap items-center gap-2 mb-2">
+                                <a href="https://drive.google.com/file/d/1q-6ybDIh6jM9n2vQM4FbTQGF-3Zxkeyl/view?usp=sharing" target="_blank" class="text-lg font-bold text-blue-600 hover:underline decoration-blue-400 underline-offset-4 transition-all">Air Jetplane Concept ↗</a>
+                                <span class="px-2 py-0.5 text-[10px] font-bold text-white bg-blue-500 rounded uppercase">CAD</span>
+                            </div>
+                            <div class="h-64 mb-4 overflow-hidden rounded-xl border border-slate-100 bg-slate-50 flex items-center justify-center">
+                                <video autoplay muted loop playsinline class="max-w-full max-h-full object-contain">
+                                    <source src="SolidWorks toy project.mp4" type="video/mp4">
+                                </video>
+                            </div>
+                            <p class="text-slate-600 text-sm">Focus on aerodynamic geometries and high-fidelity surfacing in SolidWorks.</p>
+                        </div>
+                    </div>
+
                 </div>
-            </div>
+            </section>
 
-        </div>
-    </section>
-
-
-    <section id="experience" class="mb-20">
-        <h2 class="text-2xl font-bold section-title">Experience</h2>
-        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
-            <div class="p-6 border border-slate-100 rounded-2xl">
-                <h4 class="font-bold mb-2">Handcrafting</h4>
-                <p class="text-xs text-slate-500 leading-relaxed">Applying engineering precision to physical hobbyist builds and manual arts.</p>
-            </div>
-            <div class="p-6 border border-slate-100 rounded-2xl">
-                <h4 class="font-bold mb-2">Mentoring</h4>
-                <p class="text-xs text-slate-500 leading-relaxed">Assisting newcomers at Don Mills CI through cultural exchange and leadership.</p>
-            </div>
-            <div class="p-6 border border-slate-100 rounded-2xl">
-                <h4 class="font-bold mb-2">Guiding</h4>
-                <p class="text-xs text-slate-500 leading-relaxed">Docent in Tianjin Museum sharing history and culture with diverse audiences.</p>
-            </div>
-            <div class="p-6 border border-slate-100 rounded-2xl">
-                <h4 class="font-bold mb-2">Magic</h4>
-                <p class="text-xs text-slate-500 leading-relaxed">Performing stage magic to engage and inspire youth audiences.</p>
-            </div>
-        </div>
-    </section>
-
-    <section id="skills" class="mb-20">
-        <h2 class="text-2xl font-bold section-title">Skillset</h2>
-        <div class="grid grid-cols-2 sm:grid-cols-4 gap-8">
-            <div>
-                <h4 class="text-[10px] font-bold text-slate-400 uppercase tracking-widest mb-3">Technical</h4>
-                <ul class="text-sm space-y-1 text-slate-700"><li>C++ / GitHub</li><li>SolidWorks</li><li>3D Printing</li></ul>
-            </div>
-            <div>
-                <h4 class="text-[10px] font-bold text-slate-400 uppercase tracking-widest mb-3">Languages</h4>
-                <ul class="text-sm space-y-1 text-slate-700"><li>English</li><li>Mandarin (Native)</li></ul>
-            </div>
-            <div>
-                <h4 class="text-[10px] font-bold text-slate-400 uppercase tracking-widest mb-3">Certifications</h4>
-                <ul class="text-sm space-y-1 text-slate-700"><li>WHMIS</li><li>TPCS2</li></ul>
-            </div>
-            <div>
-                <h4 class="text-[10px] font-bold text-slate-400 uppercase tracking-widest mb-3">Interests</h4>
-                <ul class="text-sm space-y-1 text-slate-700"><li>Magic</li><li>Handcrafting</li></ul>
-            </div>
-        </div>
-    </section>
-
-</main>
+            </main>
     </div>
 
     <script>
-        const video = document.getElementById("jetVideo");
-        video.addEventListener("click", function () {
-            if (video.paused) { video.play(); } 
-            else { video.pause(); }
-        });
+        const messages = [
+            "Undergrad Student",
+            "Biomedical Engineering",
+            "Aspiring Student of Knowledge",
+            "Pretend to know how to do magic"
+        ];
+        
+        let msgIndex = 0;
+        let charIndex = 0;
+        let isDeleting = false;
+        
+        function handleTyping() {
+            const target = document.getElementById("typewriter");
+            const currentMsg = messages[msgIndex];
+            
+            if (isDeleting) {
+                target.textContent = currentMsg.substring(0, charIndex - 1);
+                charIndex--;
+            } else {
+                target.textContent = currentMsg.substring(0, charIndex + 1);
+                charIndex++;
+            }
+            
+            if (!isDeleting && charIndex === currentMsg.length) {
+                isDeleting = true;
+                setTimeout(handleTyping, 2000);
+            } else if (isDeleting && charIndex === 0) {
+                isDeleting = false;
+                msgIndex = (msgIndex + 1) % messages.length;
+                setTimeout(handleTyping, 500);
+            } else {
+                setTimeout(handleTyping, isDeleting ? 40 : 80);
+            }
+        }
+        document.addEventListener("DOMContentLoaded", handleTyping);
     </script>
-
-    <script>
-    const messages = [
-        "Undergrad Student",
-        "Biomedical Engineering",
-        "Aspiring Student of Knowledge",
-        "Pretend to know how to do magic"
-    ];
-    
-    let msgIndex = 0;
-    let charIndex = 0;
-    let isDeleting = false;
-    const typeSpeed = 80;   // How fast it types
-    const eraseSpeed = 40;  // How fast it deletes
-    const waitTime = 2000;  // How long the message stays on screen
-
-    function handleTyping() {
-        const target = document.getElementById("typewriter");
-        const currentMsg = messages[msgIndex];
-        
-        if (isDeleting) {
-            target.textContent = currentMsg.substring(0, charIndex - 1);
-            charIndex--;
-        } else {
-            target.textContent = currentMsg.substring(0, charIndex + 1);
-            charIndex++;
-        }
-        
-        if (!isDeleting && charIndex === currentMsg.length) {
-            // Finished typing, pause
-            isDeleting = true;
-            setTimeout(handleTyping, waitTime);
-        } else if (isDeleting && charIndex === 0) {
-            // Finished deleting, move to next
-            isDeleting = false;
-            msgIndex = (msgIndex + 1) % messages.length;
-            setTimeout(handleTyping, 500);
-        } else {
-            // Continue typing/deleting
-            setTimeout(handleTyping, isDeleting ? eraseSpeed : typeSpeed);
-        }
-    }
-
-    document.addEventListener("DOMContentLoaded", handleTyping);
-</script>
 </body>
 </html>
