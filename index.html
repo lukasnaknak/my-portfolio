@@ -16,76 +16,69 @@
         scroll-behavior: smooth;
     }
 
-    /* Minimalist section headers */
     .section-title { 
         border-bottom: 1px solid #eee; 
         padding-bottom: 0.5rem; 
         margin-bottom: 2rem; 
     }
 
-    /* Navigation styling */
     .nav-link { 
         color: #666; 
         transition: color 0.2s; 
         font-size: 0.875rem; 
     }
-    .nav-link:hover { 
-        color: #000; 
-    }
+    .nav-link:hover { color: #000; }
     
-    /* NEW: Black Vertical Typing Line */
+    /* Clean Black Line Cursor */
     .cursor {
         display: inline-block;
-        width: 2px; /* Thinner line like a text editor */
-        height: 1.2em;
-        background-color: #000000; /* Pure black */
-        margin-left: 3px;
-        vertical-align: middle;
-        animation: blink 1.2s step-end infinite;
+        width: 2px;
+        height: 1.1em;
+        background-color: #000000; /* Force Black */
+        margin-left: 1px;
+        vertical-align: text-bottom; /* Better alignment with letters */
+        animation: blink 1s step-end infinite;
     }
 
+    /* Fixed animation: No blue, just simple visibility toggle */
     @keyframes blink {
         from, to { opacity: 1; }
         50% { opacity: 0; }
+    }
+
+    /* Prevents layout jump when text wraps */
+    #typewriter {
+        white-space: pre-wrap;
+        word-break: break-word;
     }
 </style>
 </head>
 <body class="max-w-6xl mx-auto px-6 py-12">
 
-    <header class="flex justify-between items-center mb-20">
-        <h1 class="text-3xl font-extrabold tracking-tighter">Lukas Li</h1>
-        <nav class="flex gap-8">
-            <a href="#about" class="nav-link">Home</a>
-            <a href="#build" class="nav-link">Projects</a>
-            <a href="#experience" class="nav-link">Experience</a>
-            <a href="#skills" class="nav-link">Skills</a>
-        </nav>
-    </header>
+<header class="flex justify-between items-center mb-20">
+    <h1 class="text-3xl font-extrabold tracking-tighter">Lukas Li</h1>
+    <nav class="flex gap-8">
+        <a href="#about" class="nav-link">Home</a>
+        <a href="#build" class="nav-link">Projects</a>
+        <a href="#experience" class="nav-link">Experience</a>
+        <a href="#skills" class="nav-link">Skills</a>
+    </nav>
+</header>
 
-    <div class="grid grid-cols-1 md:grid-cols-12 gap-12 lg:gap-20">
-        
-        <aside class="md:col-span-4 lg:col-span-3">
-            <div class="md:sticky md:top-12">
-                <div class="w-48 h-48 rounded-full overflow-hidden border border-slate-200 mb-8 shadow-sm">
-                    <img src="profile.jpg" alt="Lukas Li" class="w-full h-full object-cover object-[70%_20%]">
-                </div>
-                
-                <div class="mb-8">
-                    <h2 class="text-blue-600 font-bold text-xl min-h-[1.5em] flex items-center">
-                        <span id="typewriter"></span><span class="cursor">|</span>
-                    </h2>
-                    <p class="text-slate-600 text-sm">First Year @ Waterloo</p>
-                </div>
-                
-                <div class="mb-10">
-                    <h3 class="text-xs font-bold uppercase tracking-widest text-slate-400 mb-3">Academic Affiliations</h3>
-                    <ul class="space-y-2 text-sm">
-                        <li class="flex items-center gap-1">
-                            <a href="https://uwaterloo.ca/biomedical-engineering/" target="_blank" class="text-blue-600 hover:underline decoration-dotted underline-offset-4 font-medium">BME</a>
-                            <span class="text-slate-600">@ Waterloo</span>
-                        </li>
-                    </ul>
-                </div>
+<div class="max-w-7xl mx-auto px-4 grid grid-cols-1 md:grid-cols-12 gap-8 lg:gap-16">
+    
+    <aside class="md:col-span-3 lg:col-span-3">
+        <div class="sticky top-12">
+            <div class="w-48 h-48 rounded-full overflow-hidden border border-slate-200 mb-8 shadow-sm">
+                <img src="profile.jpg" alt="Lukas Li" class="w-full h-full object-cover">
+            </div>
+
+            <div class="mb-8">
+                <h2 class="text-black font-bold text-xl min-h-[3em] leading-tight">
+                    <span id="typewriter"></span><span class="cursor"></span>
+                </h2>
+                <p class="text-slate-600">First Year @ Waterloo</p>
+            </div>
 
                 <div>
                     <h3 class="text-xs font-bold uppercase tracking-widest text-slate-400 mb-3">Contact me!</h3>
